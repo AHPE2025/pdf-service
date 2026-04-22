@@ -32,7 +32,8 @@ async function convertPdf(req, res) {
   }
 }
 
-app.get("/", (_req, res) => {
+// ← これが重要
+app.get("/", (req, res) => {
   res.json({ ok: true, service: "pdf-service" });
 });
 
